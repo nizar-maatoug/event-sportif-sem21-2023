@@ -1,10 +1,15 @@
 package org.isetbz.eventsportif.models;
 
+import jakarta.persistence.*;
+
 import java.io.Serializable;
 import java.util.Date;
 
-
+@Entity
+@Table(name="events")
 public class EventSportif implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
 
