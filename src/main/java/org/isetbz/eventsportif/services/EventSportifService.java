@@ -12,6 +12,8 @@ public interface EventSportifService {
 
    public List<EventSportifDTO> findAll();
 
+   public EventSportifDTO getById(Long id);
+
    void deleteById(Long id);
 
 }
