@@ -1,14 +1,18 @@
 package org.isetbz.eventsportif.dto;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.isetbz.eventsportif.models.EventSportif;
 
 import java.util.Date;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class EventSportifDTO {
 
     private Long id;
