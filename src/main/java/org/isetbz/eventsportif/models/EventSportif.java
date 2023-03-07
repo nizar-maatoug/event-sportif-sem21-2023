@@ -1,10 +1,19 @@
 package org.isetbz.eventsportif.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.util.Date;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="events")
 public class EventSportif implements Serializable {
@@ -22,63 +31,11 @@ public class EventSportif implements Serializable {
     private Date dateDebut;
 
     private Date dateFin;
+    @CreatedDate
+    @Column(name="creationDate",nullable = false, updatable = false)
+    private Instant creationDate;
+    @LastModifiedDate
+    @Column(name="lastModifiedDate")
+    private Instant lastModifiedDate;
 
-    public EventSportif() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getLieu() {
-        return Lieu;
-    }
-
-    public void setLieu(String lieu) {
-        Lieu = lieu;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
-    }
-
-    public String getPoster() {
-        return poster;
-    }
-
-    public void setPoster(String poster) {
-        this.poster = poster;
-    }
-
-    public Date getDateDebut() {
-        return dateDebut;
-    }
-
-    public void setDateDebut(Date dateDebut) {
-        this.dateDebut = dateDebut;
-    }
-
-    public Date getDateFin() {
-        return dateFin;
-    }
-
-    public void setDateFin(Date dateFin) {
-        this.dateFin = dateFin;
-    }
 }
