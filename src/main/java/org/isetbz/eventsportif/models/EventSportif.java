@@ -2,6 +2,7 @@ package org.isetbz.eventsportif.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -14,6 +15,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 @Table(name="events")
 public class EventSportif implements Serializable {
@@ -22,7 +24,7 @@ public class EventSportif implements Serializable {
     private Long id;
     private String nom;
 
-    private String Lieu;
+    private String lieu;
 
     private String logo;
 
