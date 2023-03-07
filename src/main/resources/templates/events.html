@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Evenements Sportif</title>
+</head>
+<body>
+    <h2>Liste des évènements</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nom</th>
+                <th>Lieu</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+            </tr>
+            <tr th:each="event: ${events}">
+                <td th:text="${event.id}"></td>
+                <td th:text="${event.nom}"></td>
+                <td th:text="${event.lieu}"></td>
+                <td th:date="${event.dateDebut}"></td>
+                <td></td>
+
+            </tr>
+        </thead>
+    </table>
+
+
+</body>
+</html>

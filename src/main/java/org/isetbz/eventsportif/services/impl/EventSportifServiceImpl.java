@@ -49,6 +49,6 @@ public class EventSportifServiceImpl implements EventSportifService {
 
     @Override
     public void deleteById(Long id) {
-
+        eventSportifRepository.deleteById(id);
     }
 }
