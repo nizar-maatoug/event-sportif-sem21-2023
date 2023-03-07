@@ -32,7 +32,7 @@ public class EventSportifDTO {
         EventSportif eventSportif=new EventSportif();
         return EventSportif.builder()
                 .id(eventSportifDTO.getId())
-                .nom(eventSportifDTO.getLieu())
+                .nom(eventSportifDTO.getNom())
                 .lieu(eventSportifDTO.getLieu())
                 .logo(eventSportifDTO.getLogo())
                 .poster(eventSportifDTO.getPoster())
@@ -56,6 +56,5 @@ public class EventSportifDTO {
                 .dateFin(eventSportif.getDateFin())
                 .build();
     }
-
 
 }
