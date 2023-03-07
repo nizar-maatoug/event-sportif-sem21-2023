@@ -39,10 +39,9 @@ public class EventSportifServiceImpl implements EventSportifService {
 
     @Override
     public List<EventSportifDTO> findAll() {
-
         List<EventSportif> eventSportifs=eventSportifRepository.findAll();
         List<EventSportifDTO> eventSportifDTOS=eventSportifs.stream().map(eventSportif -> EventSportifDTO.fromEntity(eventSportif)).toList();
-        return null;
+        return eventSportifDTOS;
     }
 
 

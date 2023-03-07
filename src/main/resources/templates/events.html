@@ -19,9 +19,8 @@
                 <td th:text="${event.id}"></td>
                 <td th:text="${event.nom}"></td>
                 <td th:text="${event.lieu}"></td>
-                <td th:date="${event.dateDebut}"></td>
-                <td></td>
-
+                <td th:text="${#dates.format(event.dateDebut, 'dd-MM-yyyy')}"></td>
+                <td th:text="${#dates.format(event.dateFin, 'dd-MM-yyyy')}"></td>
             </tr>
         </thead>
     </table>

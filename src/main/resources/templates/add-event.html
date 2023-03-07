@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter Evenement</title>
+</head>
+<body>
+  <h2>Ajouter Evenement</h2>
+  <form th:action="@{/save-event}" method="post" th:object="${event}">
+      <div >
+          <label  for="event_name">Nom:</label>
+          <div class="col-md-4">
+              <input id="event_name" th:field = "*{nom}" name="event_name" required type="text">
+          </div>
+      </div>
+      <div >
+          <label  for="event_address">Lieu:</label>
+          <div class="col-md-4">
+              <input id="event_address" th:field = "*{lieu}" name="event_address" required type="text">
+          </div>
+      </div>
+<!--      <div >-->
+<!--          <label  for="event_date_debut">Date début:</label>-->
+<!--          <div class="col-md-4">-->
+<!--              <input id="event_date_debut" th:field = "*{dateDebut}" name="event_date_debut" required type="date">-->
+<!--          </div>-->
+<!--      </div>-->
+      <div >
+          <label  for="event_date_fin">Date Fin:</label>
+          <div class="col-md-4">
+              <input id="event_date_fin" th:field = "*{dateFin}" name="event_date_fin" required type="date">
+          </div>
+      </div>
+
+      <button type="submit" >Save</button>
+
+
+  </form>
+
+
+</body>
+</html>
