@@ -8,6 +8,8 @@ public interface EventSportifService {
 
    public EventSportifDTO save(EventSportifDTO eventSportifDTO);
 
+   public EventSportifDTO update(EventSportifDTO eventSportifDTO);
+
    public List<EventSportifDTO> findAll();
 
    void deleteById(Long id);
