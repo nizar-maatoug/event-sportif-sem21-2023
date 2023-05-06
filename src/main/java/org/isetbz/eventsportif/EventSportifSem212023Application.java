@@ -32,6 +32,93 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
 		eventSportifDTO=eventSportifService.save(eventSportifDTO);
 
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		 eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+
+
+
+
+
+
+
 		List<EventSportifDTO> eventSportifDTOS=eventSportifService.findAll();
 
 		eventSportifDTOS.stream().forEach(event -> {System.out.println(event.getNom());

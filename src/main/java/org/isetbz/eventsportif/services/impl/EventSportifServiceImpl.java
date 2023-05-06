@@ -5,6 +5,8 @@ import org.isetbz.eventsportif.models.EventSportif;
 import org.isetbz.eventsportif.repositories.EventSportifRepository;
 import org.isetbz.eventsportif.services.EventSportifService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -44,6 +46,12 @@ public class EventSportifServiceImpl implements EventSportifService {
         return eventSportifDTOS;
     }
 
+    @Override
+    public Page<EventSportifDTO> findAll(int page,int size) {
+        Page<EventSportif> eventSportifPage=eventSportifRepository.findAll(PageRequest.of(page,size));
+        Page<EventSportifDTO> eventSportifDTOPage= eventSportifPage.map(eventSportif -> EventSportifDTO.fromEntity(eventSportif));
+        return eventSportifDTOPage;
+    }
 
 
     @Override

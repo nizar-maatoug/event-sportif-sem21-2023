@@ -3,28 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Evenements Sportif</title>
+    <link rel="stylesheet" href="webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 </head>
 <body>
-    <h2>Liste des évènements</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>Nom</th>
-                <th>Lieu</th>
-                <th>Date de début</th>
-                <th>Date de fin</th>
-            </tr>
-            <tr th:each="event: ${events}">
-                <td th:text="${event.id}"></td>
-                <td th:text="${event.nom}"></td>
-                <td th:text="${event.lieu}"></td>
-                <td th:text="${#dates.format(event.dateDebut, 'dd-MM-yyyy')}"></td>
-                <td th:text="${#dates.format(event.dateFin, 'dd-MM-yyyy')}"></td>
-            </tr>
-        </thead>
-    </table>
-    <a th:href="@{/add-event}"> Ajouter event</a>
+     <div class="container mt-4">
+         <div class="card">
+             <div class="card-header">
+                 Liste des évènements
+             </div>
+             <div class="card-body">
+                 <table class="table">
+                     <thead>
+                     <tr>
+                         <th>id</th>
+                         <th>Nom</th>
+                         <th>Lieu</th>
+                         <th>Date de début</th>
+                         <th>Date de fin</th>
+                     </tr>
+                     <tr th:each="event: ${events}">
+                         <td th:text="${event.id}"></td>
+                         <td th:text="${event.nom}"></td>
+                         <td th:text="${event.lieu}"></td>
+                         <td th:text="${#dates.format(event.dateDebut, 'dd-MM-yyyy')}"></td>
+                         <td th:text="${#dates.format(event.dateFin, 'dd-MM-yyyy')}"></td>
+                     </tr>
+                     </thead>
+                 </table>
+                 <ul class="nav nav-pills">
+                     <li th:each="p,status:${pages}">
+                         <a th:class="${status.index==currentPage ? 'btn btn-primary ms1': 'btn btn-outline-info ms1'}"
+                         th:text="${status.index+1}"
+                         th:href="@{events(page=${status.index})}">
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+             <div class="card-footer">
+                 <a th:href="@{/add-event}"> Ajouter event</a>
+             </div>
+         </div>
+
+
+
+
+     </div>
+
 
 
 </body>
