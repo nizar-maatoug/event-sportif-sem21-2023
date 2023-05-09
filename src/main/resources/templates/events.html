@@ -20,6 +20,7 @@
                          <th>Lieu</th>
                          <th>Date de début</th>
                          <th>Date de fin</th>
+                         <th>Action</th>
                      </tr>
                      <tr th:each="event: ${events}">
                          <td th:text="${event.id}"></td>
@@ -27,6 +28,10 @@
                          <td th:text="${event.lieu}"></td>
                          <td th:text="${#dates.format(event.dateDebut, 'dd-MM-yyyy')}"></td>
                          <td th:text="${#dates.format(event.dateFin, 'dd-MM-yyyy')}"></td>
+                         <td>
+                             <a th:href="@{update-event(id = ${event.id})}">Modifier</a>
+                             <a th:href="@{delete-event/{id}(id=${event.id})}">Supprimer</a>
+                         </td>
                      </tr>
                      </thead>
                  </table>
@@ -40,7 +45,7 @@
                  </ul>
              </div>
              <div class="card-footer">
-                 <a th:href="@{/add-event}"> Ajouter event</a>
+                 <a th:href="@{add-event}"> Ajouter event</a>
              </div>
          </div>
 

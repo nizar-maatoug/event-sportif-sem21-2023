@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mise à jour event</title>
+    <link rel="stylesheet" href="webjars/bootstrap/5.2.3/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <span th:text="${action}"></span>
+    </div>
+    <div class="card-body">
+      <form th:action="@{/save-event}" method="post" th:object="${event}">
+
+        <input type="hidden" th:field="*{id}" />
+
+        <div class="mb-3" >
+          <label  for="event_id" class="form-label">Id:</label>
+          <input class="form-control" id="event_id" th:field = "*{id}" th:value="*{id}" name="event_id" disabled required type="text">
+        </div>
+
+        <div class="mb-3" >
+          <label  for="event_name" class="form-label">Nom:</label>
+          <input class="form-control" id="event_name" th:field = "*{nom}" th:value="*{nom}" name="event_name" required type="text">
+        </div>
+        <div class="mb-3">
+          <label  for="event_address" class="form-label">Lieu:</label>
+          <input class="form-control" id="event_address" th:field = "*{lieu}" th:value="*{lieu}" name="event_address" required type="text">
+        </div>
+        <div class="mb-3">
+          <label  for="event_date_debut" class="form-label">Date début:</label>
+          <input class="form-control" id="event_date_debut" th:field = "*{dateDebut}" th:value="*{dateDebut}" name="event_date_debut" required type="date">
+        </div>
+        <div class="mb-3">
+          <label  for="event_date_fin" class="form-label">Date Fin:</label>
+          <input class="form-control" id="event_date_fin" th:field = "*{dateFin}" th:value="*{dateFin}" name="event_date_fin" required type="date">
+        </div>
+
+        <button class="btn btn-primary" type="submit" >Save</button>
+
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

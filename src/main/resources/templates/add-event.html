@@ -2,40 +2,44 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Ajouter Evenement</title>
+    <title >Ajouter event</title>
+    <link rel="stylesheet" href="webjars/bootstrap/5.2.3/css/bootstrap.min.css">
 </head>
 <body>
-  <h2>Ajouter Evenement</h2>
-  <form th:action="@{/save-event}" method="post" th:object="${event}">
-      <div >
-          <label  for="event_name">Nom:</label>
-          <div class="col-md-4">
-              <input id="event_name" th:field = "*{nom}" name="event_name" required type="text">
-          </div>
-      </div>
-      <div >
-          <label  for="event_address">Lieu:</label>
-          <div class="col-md-4">
-              <input id="event_address" th:field = "*{lieu}" name="event_address" required type="text">
-          </div>
-      </div>
-      <div >
-          <label  for="event_date_debut">Date début:</label>
-          <div class="col-md-4">
-              <input id="event_date_debut" th:field = "*{dateDebut}" name="event_date_debut" required type="date">
-          </div>
-      </div>
-      <div >
-          <label  for="event_date_fin">Date Fin:</label>
-          <div class="col-md-4">
-              <input id="event_date_fin" th:field = "*{dateFin}" name="event_date_fin" required type="date">
-          </div>
-      </div>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                <span th:text="${action}"></span>
+            </div>
+            <div class="card-body">
+                <form th:action="@{/save-event}" method="post" th:object="${event}">
 
-      <button type="submit" >Save</button>
+                    <div class="mb-3" >
+                        <label  for="event_name" class="form-label">Nom:</label>
+                        <input class="form-control" id="event_name" th:field = "*{nom}" name="event_name" required type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label  for="event_address" class="form-label">Lieu:</label>
+                        <input class="form-control" id="event_address" th:field = "*{lieu}" name="event_address" required type="text">
+                    </div>
+                    <div class="mb-3">
+                        <label  for="event_date_debut" class="form-label">Date début:</label>
+                        <input class="form-control" id="event_date_debut" th:field = "*{dateDebut}"  name="event_date_debut" required type="date">
+                    </div>
+                    <div class="mb-3">
+                        <label  for="event_date_fin" class="form-label">Date Fin:</label>
+                        <input class="form-control" id="event_date_fin" th:field = "*{dateFin}"  name="event_date_fin" required type="date">
+                    </div>
+
+                    <button class="btn btn-primary" type="submit" >Save</button>
 
 
-  </form>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
 
 
 </body>
