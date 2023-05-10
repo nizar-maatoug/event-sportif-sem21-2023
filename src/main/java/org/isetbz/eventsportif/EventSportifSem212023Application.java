@@ -27,6 +27,7 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 		SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/MM/yyyy");
 		EventSportifDTO eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
@@ -34,6 +35,7 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 
 		eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
@@ -41,6 +43,7 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 
 		eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
@@ -48,6 +51,7 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 
 		eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
@@ -55,6 +59,7 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 
 		eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
@@ -62,13 +67,7 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 
 		eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
-		eventSportifDTO.setLieu("Bizerte");
-		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
-		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
-		eventSportifDTO=eventSportifService.save(eventSportifDTO);
-
-		 eventSportifDTO=new EventSportifDTO();
-		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
@@ -76,6 +75,7 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 
 		eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
@@ -83,38 +83,51 @@ public class EventSportifSem212023Application implements CommandLineRunner {
 
 		eventSportifDTO=new EventSportifDTO();
 		eventSportifDTO.setNom("Tournoi TKD");
-		eventSportifDTO.setLieu("Bizerte");
-		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
-		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
-		eventSportifDTO=eventSportifService.save(eventSportifDTO);
-		eventSportifDTO=new EventSportifDTO();
-		eventSportifDTO.setNom("Tournoi TKD");
-		eventSportifDTO.setLieu("Bizerte");
-		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
-		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
-		eventSportifDTO=eventSportifService.save(eventSportifDTO);
-		eventSportifDTO=new EventSportifDTO();
-		eventSportifDTO.setNom("Tournoi TKD");
-		eventSportifDTO.setLieu("Bizerte");
-		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
-		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
-		eventSportifDTO=eventSportifService.save(eventSportifDTO);
-		eventSportifDTO=new EventSportifDTO();
-		eventSportifDTO.setNom("Tournoi TKD");
-		eventSportifDTO.setLieu("Bizerte");
-		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
-		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
-		eventSportifDTO=eventSportifService.save(eventSportifDTO);
-		eventSportifDTO=new EventSportifDTO();
-		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
 		eventSportifDTO.setLieu("Bizerte");
 		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
 		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
 		eventSportifDTO=eventSportifService.save(eventSportifDTO);
 
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
 
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
 
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
 
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
+
+		eventSportifDTO=new EventSportifDTO();
+		eventSportifDTO.setNom("Tournoi TKD");
+		eventSportifDTO.setEmail("tournoi@sport.com");
+		eventSportifDTO.setLieu("Bizerte");
+		eventSportifDTO.setDateDebut(simpleDateFormat.parse("09/03/2023"));
+		eventSportifDTO.setDateFin(simpleDateFormat.parse("12/03/2023"));
+		eventSportifDTO=eventSportifService.save(eventSportifDTO);
 
 
 

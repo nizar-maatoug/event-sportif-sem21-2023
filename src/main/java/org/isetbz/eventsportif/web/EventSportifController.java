@@ -1,11 +1,13 @@
 package org.isetbz.eventsportif.web;
 
+import jakarta.validation.Valid;
 import org.isetbz.eventsportif.dto.EventSportifDTO;
 import org.isetbz.eventsportif.services.EventSportifService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -47,8 +49,11 @@ public class EventSportifController {
     }
 
     @PostMapping("save-event")
-    public String saveEvent(@ModelAttribute("event") EventSportifDTO eventSportifDTO){
-        System.out.println("event "+eventSportifDTO.getId());
+    public String saveEvent(@Valid @ModelAttribute("event") EventSportifDTO eventSportifDTO, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return "add-event";
+        }
+
         eventSportifService.save(eventSportifDTO);
 
         return "redirect:/events";

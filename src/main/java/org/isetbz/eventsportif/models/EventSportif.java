@@ -25,6 +25,7 @@ public class EventSportif implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nom;
+    private String email;
 
     private String lieu;
 
@@ -32,8 +33,10 @@ public class EventSportif implements Serializable {
 
     private String poster;
 
+    @Temporal(TemporalType.DATE)
     private Date dateDebut;
 
+    @Temporal(TemporalType.DATE)
     private Date dateFin;
     @CreatedDate
     @Column(name="creationDate",nullable = false, updatable = false)

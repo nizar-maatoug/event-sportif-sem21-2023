@@ -17,18 +17,27 @@
                     <div class="mb-3" >
                         <label  for="event_name" class="form-label">Nom:</label>
                         <input class="form-control" id="event_name" th:field = "*{nom}" name="event_name" required type="text">
+                        <span class="text-danger" th:errors="${event.nom}"></span>
+                    </div>
+                    <div class="mb-3" >
+                        <label  for="event_email" class="form-label">Nom:</label>
+                        <input class="form-control" id="event_email" th:field = "*{email}" name="event_email" required type="text">
+                        <span class="text-danger" th:errors="${event.email}"></span>
                     </div>
                     <div class="mb-3">
                         <label  for="event_address" class="form-label">Lieu:</label>
                         <input class="form-control" id="event_address" th:field = "*{lieu}" name="event_address" required type="text">
+                        <span class="text-danger" th:errors="${event.lieu}"></span>
                     </div>
                     <div class="mb-3">
                         <label  for="event_date_debut" class="form-label">Date début:</label>
                         <input class="form-control" id="event_date_debut" th:field = "*{dateDebut}"  name="event_date_debut" required type="date">
+                        <span class="text-danger" th:errors="${event.dateDebut}"></span>
                     </div>
                     <div class="mb-3">
                         <label  for="event_date_fin" class="form-label">Date Fin:</label>
                         <input class="form-control" id="event_date_fin" th:field = "*{dateFin}"  name="event_date_fin" required type="date">
+                        <span class="text-danger" th:errors="${event.dateFin}"></span>
                     </div>
 
                     <button class="btn btn-primary" type="submit" >Save</button>

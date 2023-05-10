@@ -1,6 +1,10 @@
 package org.isetbz.eventsportif.dto;
 
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,16 +20,26 @@ import java.util.Date;
 public class EventSportifDTO {
 
     private Long id;
+
+    @NotEmpty
+    @Size(min=5, max = 100)
     private String nom;
 
+    @Email
+    private String email;
+
+    @NotEmpty
+    @Size(min=5, max = 100)
     private String lieu;
 
     private String logo;
 
     private String poster;
 
+    @NotNull
     private Date dateDebut;
 
+    @NotNull
     private Date dateFin;
 
     public static EventSportif toEntity(EventSportifDTO eventSportifDTO){
@@ -37,6 +51,7 @@ public class EventSportifDTO {
         return EventSportif.builder()
                 .id(eventSportifDTO.getId())
                 .nom(eventSportifDTO.getNom())
+                .email(eventSportifDTO.getEmail())
                 .lieu(eventSportifDTO.getLieu())
                 .logo(eventSportifDTO.getLogo())
                 .poster(eventSportifDTO.getPoster())
@@ -53,6 +68,7 @@ public class EventSportifDTO {
         return EventSportifDTO.builder()
                 .id(eventSportif.getId())
                 .nom(eventSportif.getNom())
+                .email(eventSportif.getEmail())
                 .lieu(eventSportif.getLieu())
                 .logo(eventSportif.getLogo())
                 .poster(eventSportif.getPoster())
